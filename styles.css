@@ -60,7 +60,7 @@ button {
     background-color: #0dfcf4;
     color: black;
     border: rgb(3, 69, 72) solid;
-    border-radius: 8px;
+    border-radius: 40px;
     cursor: pointer;
     margin: 2%;
     font-size: 20px;
@@ -82,6 +82,17 @@ button:hover {
     font-size: 20px;
     box-sizing: border-box;
     background-color: #FFF5E0;
+}
+
+footer{
+    background-color: #FFF5E0;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 0%;
+    color: rgb(6, 71, 43);
+    font-family: "Short Stack", cursive;
+    font-size: 10px;
 }
 
 @media (max-width: 600px) {
@@ -112,6 +123,10 @@ button:hover {
         font-size: 1.2em;
         margin: 3%; 
         font-size: 1.1em; 
+    }
+    footer{
+        height: 80px; 
+        font-size: 0.5em; 
     }
 
     .button-container {
