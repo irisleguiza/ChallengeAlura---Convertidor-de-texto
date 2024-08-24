@@ -43,6 +43,8 @@ textarea {
     border-radius: 4px;
     font-size: 20px;
     box-sizing: border-box;
+    font-family: "Short Stack";
+   
 }
 
 .button-container {
@@ -82,3 +84,37 @@ button:hover {
     background-color: #FFF5E0;
 }
 
+@media (max-width: 600px) {
+    body {
+        padding: 10%; 
+    }
+
+    .caja-blanca {
+        margin: 10%;
+        margin-top: 85%;
+        padding: 7%;
+    }
+
+    h3 {
+        font-size: 1.1em; 
+    }
+
+    p {
+        font-size: 0.75em; 
+    }
+    textarea, #output {
+        height: 80px; 
+        font-size: 0.9em; 
+    }
+
+    button {
+        padding: 5%;
+        font-size: 1.2em;
+        margin: 3%; 
+        font-size: 1.1em; 
+    }
+
+    .button-container {
+        flex-direction: column;
+    }
+}

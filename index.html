@@ -14,7 +14,7 @@
     <h3><strong>Bem-vindo ao Codificador e Decodificador de Texto!</strong></h3>
     <p>Use esta ferramenta simples para codificar e decodificar texto em Base64. </p>
     <P>Basta digitar o texto no campo abaixo e clicar em um dos botões para ver o resultado.</P>
-    <p> Aproveite</p>
+    <p> Aproveite!</p>
     
     <textarea id="inputText" placeholder="Digite o texto aqui..."></textarea><br>
 
@@ -37,15 +37,15 @@
         function decodificar() {
             const input = document.getElementById("inputText").value;
             try {
-                const decodificado = atob(input); // decodificação Base64
+                const decodificado = atob(input); 
                 document.getElementById("output").innerText = decodificado;
             } catch (e) {
                 document.getElementById("output").innerText = "Erro: O texto fornecido não está codificado corretamente.";
             }
         }
         function limpar() {
-            document.getElementById("inputText").value = ''; // Limpa o campo de entrada
-            document.getElementById("output").innerText = ''; // Limpa a saída
+            document.getElementById("inputText").value = ''; 
+            document.getElementById("output").innerText = ''; 
         }
     </script>
 </body>
