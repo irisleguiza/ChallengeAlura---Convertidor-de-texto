@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codificador e Decodificador de Texto</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Short+Stack&display=swap" rel="stylesheet">
+  
+<body>
+    <h3><strong>Bem-vindo ao Codificador e Decodificador de Texto!</strong></h3>
+    <p>Use esta ferramenta simples para codificar e decodificar texto em Base64. </p>
+    <P>Basta digitar o texto no campo abaixo e clicar em um dos botões para ver o resultado.</P>
+    <p> Aproveite</p>
+    
+    <textarea id="inputText" placeholder="Digite o texto aqui..."></textarea><br>
+
+    <div class=button-container>
+    <button onclick="codificar()">Codificar</button>
+    <button onclick="decodificar()">Decodificar</button><br>
+    <button onclick="limpar()">Limpar</button><br>
+    </div>
+
+    <div id="output"></div>
+
+    <script>
+        function codificar() {
+            const input = document.getElementById("inputText").value;
+            const codificado = btoa(input); // codificação Base64
+            document.getElementById("output").innerText = codificado;
+        }
+
+        function decodificar() {
+            const input = document.getElementById("inputText").value;
+            try {
+                const decodificado = atob(input); // decodificação Base64
+                document.getElementById("output").innerText = decodificado;
+            } catch (e) {
+                document.getElementById("output").innerText = "Erro: O texto fornecido não está codificado corretamente.";
+            }
+        }
+        function limpar() {
+            document.getElementById("inputText").value = ''; // Limpa o campo de entrada
+            document.getElementById("output").innerText = ''; // Limpa a saída
+        }
+    </script>
+</body>
+</html>
